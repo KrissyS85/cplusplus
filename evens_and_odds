@@ -1,0 +1,41 @@
+
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	int num, sum, even, odd = 0;
+
+	cout << "Input list of even and odd numbers to find the sum" <<endl;
+	
+        cin >> num;
+
+	while (num > 0)
+
+	{
+
+		sum = sum + num % 2;
+		num = num / 2;
+		
+	}
+
+		if (num 2 % == 0) //If even
+			even = even + num; //add to sum even numbers
+		
+		
+
+		else (num 2 % !=0) //If odd
+			odd = odd + num; //adds to sum of odd numbers
+		
+	}
+
+		
+		cout << "The sum of the even integers is: " << even << endl;
+	        cout << "The sum of the odd integers is: " << odd << endl;
+	
+                return 0;
+}
+			
