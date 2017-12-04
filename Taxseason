@@ -1,0 +1,48 @@
+Krystal Smith
+Assignment 6 - Tax Season
+
+
+-----------------------------------------------------------------------------------
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+double calBill(int consultMin, double hourlyRate, int income); //initalizing variables
+
+int main()
+{
+    int income, consultMin;
+    double hourlyRate;
+
+//user input and output
+
+    cout << "Please enter income: $" ;
+    cin >> income;
+    cout << "Please enter the consulting minutes: ";
+    cin >> consultMin;
+    cout << "Please enter the hourly rate: $";
+    cin >> hourlyRate;
+    cout << fixed << showpoint << setprecision(2);
+    cout << "Your total amount comes to: $" << calBill(income, consultMin, hourlyRate) << endl;
+    return 0;
+}
+
+//program calculations
+
+double calBill(int income, int consultMin, double hourlyRate){
+    if (income <= 25000) {
+        if (consultMin <= 30)
+            return 0;
+        else
+            return hourlyRate * 0.40 * ((consultMin - 30) / 60);
+    }
+    else {
+        if (consultMin <= 20)
+            return 0;
+        else 
+            return hourlyRate * 0.70 * ((consultMin - 20) / 60);
+        
+        }
+}
